@@ -5,15 +5,16 @@
  */
 package p2;
 
-import p1.MatriculaCampamento;
-import p1.MatriculaColegio;
+import java.util.ArrayList;
+import p1.*;
 
 /**
  *
  * @author reroes
  */
 public class TipoMatricula {
-    //private double promedioMatriculas;
+    private double promedioMatriculas;
+    private ArrayList<Matricula> matriculo;
     //private MatriculaCampamento campamento;
     // private MatriculaColegio colegio;
     // private MatriculaEscuela escuela;
@@ -50,8 +51,13 @@ public class TipoMatricula {
         return promedioMatriculas;
     }
     
-    public ArrayList <Matricula>{
+    public ArrayList <Matricula> obtenerMatricula(){
+        return matricula;
     
-}
+    }
+    
+    public double obtenerPromedioMatricula(){
+      return promedioMatricula;  
+    }
     
 }
