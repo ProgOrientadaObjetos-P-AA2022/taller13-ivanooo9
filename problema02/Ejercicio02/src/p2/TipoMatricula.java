@@ -13,15 +13,15 @@ import p1.MatriculaColegio;
  * @author reroes
  */
 public class TipoMatricula {
-    private double promedioMatriculas;
-    private MatriculaCampamento campamento;
-    private MatriculaColegio colegio;
+    //private double promedioMatriculas;
+    //private MatriculaCampamento campamento;
+    // private MatriculaColegio colegio;
     // private MatriculaEscuela escuela;
     // private MatriculaJardin jardin;
     // private MatriculaMaternal maternal;
     // private MatriculaMaternal maternal2;
     
-    public void establecerMatriculaCampamento(MatriculaCampamento c){
+    /*public void establecerMatriculaCampamento(MatriculaCampamento c){
         campamento = c;
     }
     
@@ -36,14 +36,22 @@ public class TipoMatricula {
     public MatriculaColegio obtenerMatriculaColegio(){
         return colegio;
     }
-    
+    */
     public void establecerPromedioTarifas(){
         promedioMatriculas = (obtenerMatriculaCampamento().obtenerTarifa() + 
                 obtenerMatriculaColegio().obtenerTarifa())/2;
         
     }
+    public void establecerMatriculas(ArrayList <Matricula> mt){
+        matricula = mt;
+    }
     
     public double obtenerPromedioTarifas(){
         return promedioMatriculas;
     }
+    
+    public ArrayList <Matricula>{
+    
+}
+    
 }
