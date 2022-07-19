@@ -13,51 +13,54 @@ import p1.*;
  * @author reroes
  */
 public class TipoMatricula {
+    
+    
+    
     private double promedioMatriculas;
-    private ArrayList<Matricula> matriculo;
-    //private MatriculaCampamento campamento;
-    // private MatriculaColegio colegio;
-    // private MatriculaEscuela escuela;
-    // private MatriculaJardin jardin;
-    // private MatriculaMaternal maternal;
-    // private MatriculaMaternal maternal2;
+    private ArrayList<Matricula> matriculas;
     
-    /*public void establecerMatriculaCampamento(MatriculaCampamento c){
-        campamento = c;
+//    private MatriculaCampamento campamento;
+//    private MatriculaColegio colegio;
+//    private MatriculaEscuela escuela;
+//    private MatriculaJardin jardin;
+//    private MatriculaMaternal maternal;
+//    private MatriculaMaternal maternal2;
+    
+//    public void establecerMatriculaCampamento(MatriculaCampamento c){
+//        campamento = c;
+//    }
+//    
+//    public void establecerMatriculaColegio(MatriculaColegio c){
+//        colegio = c;
+//    }
+//    
+//    public MatriculaCampamento obtenerMatriculaCampamento(){
+//        return campamento;
+//    }
+//    
+//    public MatriculaColegio obtenerMatriculaColegio(){
+//        return colegio;
+//    }
+    
+    public void establecerMatriculas(ArrayList<Matricula> mt){
+        matriculas = mt;
     }
     
-    public void establecerMatriculaColegio(MatriculaColegio c){
-        colegio = c;
-    }
-    
-    public MatriculaCampamento obtenerMatriculaCampamento(){
-        return campamento;
-    }
-    
-    public MatriculaColegio obtenerMatriculaColegio(){
-        return colegio;
-    }
-    */
     public void establecerPromedioTarifas(){
-        promedioMatriculas = (obtenerMatriculaCampamento().obtenerTarifa() + 
-                obtenerMatriculaColegio().obtenerTarifa())/2;
+        double suma = 0;
+        for (int i = 0; i < matriculas.size(); i++) {
+            
+            suma = suma + matriculas.get(i).obtenerTarifa();
+        }
+        promedioMatriculas = suma / matriculas.size();
         
     }
-    public void establecerMatriculas(ArrayList <Matricula> mt){
-        matricula = mt;
+    
+    public ArrayList<Matricula> obtenerMatriculas(){
+        return matriculas;
     }
     
     public double obtenerPromedioTarifas(){
         return promedioMatriculas;
     }
-    
-    public ArrayList <Matricula> obtenerMatricula(){
-        return matricula;
-    
-    }
-    
-    public double obtenerPromedioMatricula(){
-      return promedioMatricula;  
-    }
-    
 }

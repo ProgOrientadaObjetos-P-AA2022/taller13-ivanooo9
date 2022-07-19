@@ -9,22 +9,18 @@ package p1;
  *
  * @author reroes
  */
-public class extends MatriculaCampamento{
-    private double tarifa;
-   
+
+/**
+ *
+ * @author reroes
+ */
+public class MatriculaCampamento extends Matricula{
     
+    @Override
     public void establecerTarifa(){
+        // tarifa = costo transporte + costo comida + costo instructores
         tarifa = 100.2 + 30.2 + 90.2;
     }
-        
-    public double obtenerTarifa(){
-        return tarifa;
-    }
-    
-    public String toString(){
-        String cadena = String.format("Campamento - Tarifa : %.2f",
-              obtenerTarifa());
-        return cadena;
-    }
-    
 }
+
+
